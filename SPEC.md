@@ -27,7 +27,7 @@ design mobile-first, then scale up to desktop.
 | Visitor and concrete use situation | Someone who reads a lot or talks with people who have big vocabularies, and keeps looking up unfamiliar words, sometimes the same one more than once. They want one place to keep those words so they learn them instead of forgetting them. |
 | Reused IS117 brand, or name / promise / primary archetype | Name: Verbella, a personal vocabulary page of words you actually ran into. Promise: "Keep the words you find." Archetype: Sage (learning and quiet wisdom, not flashy). Learner's own logo in forest, sage and cream, static and animated, in `app/static/brand/`. A later word of the day is an idea only, outside APP-001. |
 | One visible choice and visitor benefit | Soft sage and cream colors with a bookish serif, so it feels like reading at home rather than a study app pushing you (learner's reason). Palette: forest `#474329`, sage `#AEB1A0`, cream `#F2EDE2`. Type: Cormorant Garamond headings and EB Garamond body (free OFL fonts close to the mood board's Ivy Presto and The Seasons, self-hosted). All visible app text displays lowercase, applied site-wide in CSS. Dark mode deferred. |
-| Own issue / branch / PR | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) / `app-001-homepage` / PR pending |
+| Own issue / branch / PR | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) / `app-001-homepage` / PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) |
 
 **Keep when:** the agreed identity is visible and usable at desktop/narrow widths;
 full foundation + APP-001 checks pass; AI review and the learner's actual check
@@ -82,7 +82,7 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`, `app/static/brand/`, `app/static/fonts/` | Local `check --lesson APP-001` and full `check` at marker 1: Black, Pylint, 98 foundation cases, 2 APP-001 contracts, 2 Chromium journeys passed. AI reviewed 390px and desktop layouts, keyboard focus and reduced motion (fixed: static logo shown when reduce motion is on). Learner's check interpretation, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; issue open; PR pending |
+| APP-001 | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`, `app/static/brand/`, `app/static/fonts/` | Local `check --lesson APP-001` and full `check` at marker 1: Black, Pylint, 98 foundation cases, 2 APP-001 contracts, 2 Chromium journeys passed. AI reviewed 390px and desktop layouts, keyboard focus and reduced motion (fixed: static logo shown when reduce motion is on). Learner's check interpretation, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) open, CI pending |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 
