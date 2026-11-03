@@ -19,13 +19,13 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 
 ## APP-002
 
-- Prediction: Pending.
+- Prediction: Learner predicted that a logged-out request to `/api/me` should get a signup page, or an error saying they aren't logged in with a clear call to create an account or log in.
 - Check interpretation: Pending.
 - Browser observation: Pending.
 - Keep decision: Pending.
-- Review: Pending.
-- Help/gaps: Pending.
-- Evidence links / next step: APP-001 is kept; agree this lesson's scope next.
+- Review: Learner confirmed the prediction excerpt is accurate.
+- Help/gaps: AI explained that `/api/me` answers with data (401 error vs. account info), while the logged-out call to action belongs on the browser page `/dashboard`.
+- Evidence links / next step: Issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3), branch `app-002-accounts`; plan and build next.
 
 ## APP-003
 
