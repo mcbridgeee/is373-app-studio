@@ -9,7 +9,7 @@
     <p class="eyebrow">a personal vocabulary page</p>
     <h1 id="hero-title">{{ brand.headline }}</h1>
     <p class="lede">{{ brand.summary }}</p>
-    {% if features.accounts %}<a class="button" href="/signup">Create your account <span aria-hidden="true">↗</span></a>
+    {% if features.accounts %}<a class="button" href="/signup">create your account <span aria-hidden="true">→</span></a>
     {% else %}<a class="button" href="#idea">see how it works <span aria-hidden="true">↓</span></a>{% endif %}
   </div>
 </section>
@@ -23,7 +23,7 @@
 </section>
 <section id="next" class="panel" aria-labelledby="next-title">
   <p class="eyebrow">what comes next</p>
-  {% if features.accounts %}<h2 id="next-title">Your own space starts here.</h2><p>Make an account, sign in, and see how the server protects your member space.</p><a class="text-link" href="/signup">Join {{ brand.name }} →</a>
+  {% if features.accounts %}<h2 id="next-title">a place of your own.</h2><p>make an account and log in to reach your private member space. saving words to your own list comes later.</p><a class="text-link" href="/signup">join {{ brand.name }} →</a>
   {% else %}<h2 id="next-title">a place of your own, soon.</h2><p>verbella has no accounts yet, so there is nowhere to save words today. private accounts come next, then your own word list.</p>{% endif %}
 </section>
 {% endblock %}
