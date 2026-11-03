@@ -73,6 +73,11 @@ code{font-size:.9em;overflow-wrap:anywhere}
 .account div{display:flex;justify-content:space-between;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
 .account dt{opacity:.8}
 .account dd{margin:0}
+.accounts{width:100%;border-collapse:collapse;margin-top:24px}
+.accounts caption{text-align:left}
+.accounts th,.accounts td{text-align:left;padding:12px 0;border-bottom:1px solid var(--line);font-weight:400}
+.accounts th{opacity:.8}
+.accounts td:last-child,.accounts th:last-child{text-align:right}
 .error,[role=alert]{color:#9b2424;font-weight:600}
 .notice{border-left:3px solid var(--accent);padding-left:16px}
 
