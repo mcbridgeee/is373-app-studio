@@ -6,9 +6,9 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-002 (not started).
+- **Current feature:** APP-002 (scope agreed; in progress).
 - **Status:** APP-001 kept and merged: PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) merged into `main` on November 3, 2026; issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) closed.
-- **Next step:** Agree APP-002's scope, then open its own issue and branch.
+- **Next step:** Record the learner's prediction, then plan and build APP-002.
 - **Implementation marker:** `studio.json` is at `implemented_through: 1` after APP-001 checks passed.
 
 This repository owns application code. Server/proxy changes and production
@@ -42,9 +42,9 @@ helpers; keep data local. New accounts cannot choose their role.
 
 | Decision | Agreement |
 |---|---|
-| Expected public/private behavior and account flow | Pending |
+| Expected public/private behavior and account flow | Visitor signs up (always a member), logs in, sees a private dashboard and logs out. Dashboard shows read-only account info (username, role, signup date) and an empty "no words yet" word-list area. Logged-out visitors are sent to login. Later ideas, outside APP-002: saving words to the list and editing account settings. |
 | Valid and rejected cases to demonstrate | Pending |
-| Own issue / branch / PR | Pending |
+| Own issue / branch / PR | Issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3) / `app-002-accounts` / Pending |
 
 **Keep when:** the agreed forms/API work; duplicate/invalid signup and wrong
 credentials are rejected; passwords are hashed; authentication uses validated,
