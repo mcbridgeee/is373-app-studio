@@ -1,16 +1,16 @@
 {
-  "name": "Your Project",
-  "audience": "Not chosen yet",
-  "archetype": "Not chosen yet",
-  "promise": "Not chosen yet",
-  "headline": "A small idea. A real application.",
-  "summary": "This working page is your starting point. Give it a purpose and a brand, then build accounts and permissions one feature at a time.",
-  "voice": ["Not chosen yet"],
-  "design_direction": "Not chosen yet",
+  "name": "Verbella",
+  "audience": "People who read a lot or talk with people who have big vocabularies, and keep looking up the same unfamiliar words",
+  "archetype": "Sage",
+  "promise": "keep the words you find.",
+  "headline": "a quiet home for the words you look up.",
+  "summary": "verbella is a personal vocabulary page, full of words you actually ran into. keep them in one place, and learn them instead of looking them up again.",
+  "voice": ["quiet", "warm", "unhurried"],
+  "design_direction": "Soft sage and cream with a bookish serif, like reading at home rather than a study app pushing you",
   "palette": {
-    "ink": "#182C34",
-    "paper": "#F6F5EF",
-    "accent": "#285A50",
-    "surface": "#FFFFFF"
+    "ink": "#474329",
+    "paper": "#F2EDE2",
+    "accent": "#AEB1A0",
+    "surface": "#F8F5EE"
   }
 }
