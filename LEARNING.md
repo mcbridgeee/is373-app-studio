@@ -29,10 +29,10 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 
 ## APP-003
 
-- Prediction: Pending.
-- Check interpretation: Pending.
-- Browser observation: Pending.
-- Keep decision: Pending.
-- Review: Pending.
-- Help/gaps: Pending.
-- Evidence links / next step: APP-002 is kept; agree this lesson's scope next.
+- Prediction: If a logged-in member without admin permission types `/api/admin` directly: "they should be shown that they have no access".
+- Check interpretation: For `test_a_role_claim_cannot_override_the_current_database_role`: "if the code trusted the role in the cookie instead of checking the database, anyone can make themselves admin by editing their cookie." The learner expects the test would then fail because `/api/admin` would return 200 instead of 403.
+- Browser observation: Learner made two throwaway accounts and promoted one with the terminal role command. Logged in as the admin: "i can see everyones accounts." After removing admin and reloading: "it just gives the same warning from before, that admin access is required."
+- Keep decision: Keep, because "it does what was agreed upon in scope, and everything is working as it should".
+- Review: Learner confirmed the prediction, check answer, browser observation, keep reason and help notes as accurate before the APP-003 push.
+- Help/gaps: Learner confirmed the scope sticks to the lesson's requirements and chose the read-only account list as the admin result. AI built the admin API and page with the prepared `require_admin` check and reviewed member and admin access on a throwaway database. After the browser try, the learner asked whether an admin can delete accounts or recover passwords; AI explained these are outside the agreed read-only scope and that roles change only through the terminal command.
+- Evidence links / next step: Issue [#5](https://github.com/mcbridgeee/is373-app-studio/issues/5), branch `app-003-roles`, PR [#6](https://github.com/mcbridgeee/is373-app-studio/pull/6). Next: review CI, then merge decision.

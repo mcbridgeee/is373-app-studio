@@ -6,10 +6,10 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-003 (not started).
-- **Status:** APP-001 kept and merged (PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2), issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) closed). APP-002 kept and merged (PR [#4](https://github.com/mcbridgeee/is373-app-studio/pull/4) merged into `main` on November 3, 2026; issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3) closed).
-- **Next step:** Agree APP-003's scope, then open its own issue and branch.
-- **Implementation marker:** `studio.json` is at `implemented_through: 2` after APP-002 checks passed.
+- **Current feature:** APP-003 (kept; PR [#6](https://github.com/mcbridgeee/is373-app-studio/pull/6) open).
+- **Status:** APP-001 kept and merged (PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2), issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) closed). APP-002 kept and merged (PR [#4](https://github.com/mcbridgeee/is373-app-studio/pull/4), issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3) closed). APP-003 roles built on branch `app-003-roles` for issue [#5](https://github.com/mcbridgeee/is373-app-studio/issues/5); full checks pass locally.
+- **Next step:** Review PR #6's CI, then the learner decides whether to merge.
+- **Implementation marker:** `studio.json` is at `implemented_through: 3` after APP-003 checks passed.
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -66,9 +66,9 @@ permissions, including for an existing session after a role change.
 
 | Decision | Agreement |
 |---|---|
-| Intended admin-only result | Pending |
-| Actual allowed/denied request evidence | Pending |
-| Own issue / branch / PR | Pending |
+| Intended admin-only result | Admins see a read-only list of accounts (username and role) on `/admin`, and the same list from `/api/admin`. No editing, deleting or role changes in the browser; roles change only through `python3 studio.py user role USERNAME --role admin` (or `--role member`). The Admin nav link shows only for admins, as presentation only. Learner confirmed the scope sticks to the lesson's requirements. |
+| Actual allowed/denied request evidence | Contracts and AI review: anonymous 401 (API) and redirect to login (page); member 403 on both; admin 200; promotion and downgrade apply to an existing session; an edited cookie claiming admin still gets 403. Learner's browser try: the admin saw every account; after removing admin, a reload showed the access-required page. |
+| Own issue / branch / PR | Issue [#5](https://github.com/mcbridgeee/is373-app-studio/issues/5) / `app-003-roles` / PR [#6](https://github.com/mcbridgeee/is373-app-studio/pull/6) |
 
 **Keep when:** a direct request cannot bypass the role boundary, role changes
 take effect as specified, new signup remains member-only, and full cumulative
@@ -84,7 +84,7 @@ customer research or claims that a timestamp proves learning.
 |---|---|---|---|
 | APP-001 | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`, `app/static/brand/`, `app/static/fonts/` | Local `check --lesson APP-001` and full `check` at marker 1: Black, Pylint, 98 foundation cases, 2 APP-001 contracts, 2 Chromium journeys passed. AI reviewed 390px and desktop layouts, keyboard focus and reduced motion (fixed: static logo shown when reduce motion is on). Learner's check interpretation, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) merged after `check` and `windows` CI passed; issue #1 closed |
 | APP-002 | Issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3); `app/features/accounts.py`, `app/templates/signup.html`, `app/templates/login.html`, `app/templates/dashboard.html`, `app/templates/home.html`, `app/static/site.css` | Local `check --lesson APP-002` and full `check` at marker 2: Black, Pylint, 98 foundation cases, 14 cumulative contracts, 2 Chromium journeys passed. AI reviewed signup, wrong-password retry and dashboard at 390px on a throwaway database. Learner's check answer, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; PR [#4](https://github.com/mcbridgeee/is373-app-studio/pull/4) merged after `check` and `windows` CI passed; issue #3 closed |
-| APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
+| APP-003 | Issue [#5](https://github.com/mcbridgeee/is373-app-studio/issues/5); `app/features/roles.py`, `app/templates/admin.html`, `app/static/site.css` | Local `check --lesson APP-003` and full `check` at marker 3: Black, Pylint, 98 foundation cases, 18 cumulative contracts, 2 Chromium journeys passed. AI review on a throwaway database: anonymous `/api/admin` 401; member 403 with the "Admin access required" page and no Admin nav link; after `studio.py user role ... --role admin` in the same login, 200 with the account list and the Admin link; after `--role member`, 403 again. Learner interpreted the edited-cookie check and confirmed member vs admin in the browser | PR [#6](https://github.com/mcbridgeee/is373-app-studio/pull/6) open; CI pending |
 
 The instructor's reference branches show possible implementations. They do not
 establish this repository's completion or the learner's own reasoning.

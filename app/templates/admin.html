@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}admin · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="form-stack" aria-labelledby="admin-title">
+  {% if denied %}
+  <p class="eyebrow">no access</p>
+  <h1 id="admin-title">Admin access required</h1>
+  <p>you are logged in as a member, and this page is only for admins. your member space is still yours.</p>
+  <p><a class="text-link" href="/dashboard">back to your member space</a></p>
+  {% else %}
+  <p class="eyebrow">admins only</p>
+  <h1 id="admin-title">Administration</h1>
+  <p>every account, read-only. roles change only through the trusted terminal command.</p>
+  <table class="accounts">
+    <caption class="eyebrow">{{ accounts|length }} account{{ "" if accounts|length == 1 else "s" }}</caption>
+    <thead><tr><th scope="col">username</th><th scope="col">role</th></tr></thead>
+    <tbody>
+      {% for account in accounts %}<tr><td>{{ account.username }}</td><td>{{ account.role }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</section>
+{% endblock %}
