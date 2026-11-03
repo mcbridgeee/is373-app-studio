@@ -10,7 +10,7 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 ## APP-001
 
 - Prediction: "i am intentionally choosing the archetype sage, and the warm, bookish feel to be calming to users." Expects the design to feel "aesthetic", "matcha", "reading in bed", "cup of tea", "plant on my desk", while staying "an aesthetic, low pressure choice for learning vocabulary, feeling personal and smart/wise to use"; "not flashy, not in your face, and doesn't feel like it's bombarding you."
-- Check interpretation: On `test_chosen_brand_reaches_the_homepage`: "this test would not test the fonts, and this test would catch if the html formatting was off (no <h1>), if there was no svg, and it would catch if the words "your project" is on the page"
+- Check interpretation: On `test_chosen_brand_reaches_the_homepage`: "this test would not test the fonts, and this test would catch if the html formatting was off (no `<h1>`), if there was no svg, and it would catch if the words "your project" is on the page"
 - Browser observation: "the nav bar looks really great, the svg logo alongside the wordmark looks great. the color palette is good, and it looks good on mobile." Also noticed that the "see how it works" button "may not contrast strongly enough."
 - Keep decision: Keep the sage button: "it suits the overall look well and vibe of the app ... it is a clear button, and the only button, on the page for the user to click, so for now it does its job." Learner was unsure how much the text contrast matters.
 - Review: Learner read the full APP-001 record and confirmed it accurate before the first push (November 3, 2026).
@@ -20,7 +20,7 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 ## APP-002
 
 - Prediction: Learner predicted that a logged-out request to `/api/me` should get a signup page, or an error saying they aren't logged in with a clear call to create an account or log in.
-- Check interpretation: On `test_logout_revokes_a_copied_token_and_get_does_not_log_out`, after one hint, asked what a 200 in place of 401 would mean: "i dont know, i think it would just return a different error". Not yet evidenced: what the replay check protects against.
+- Check interpretation: On `test_logout_revokes_a_copied_token_and_get_does_not_log_out`, after one hint, asked what a 200 in place of 401 would mean: "i dont know, i think it would just return a different error". Added after the APP-002 merge: "it protects against someone reusing a copied login cookie after log out. logging out has to end the session on the server too rather than just browser, so the old cookie stops working"
 - Browser observation: Signed up, logged in and out: "it catches if you have enough characters in your password", logging in "takes you to the screen with all your information, and logging out logs you out", and "if you try to go to / dashboard while logged out it gives no error just takes you to the sign in page." Learner's concern: "i don't think it's secure, and i dont think it can sense if someone is trying to break in or hack your account."
 - Keep decision: Keep: "it does the flow we wanted it to and is aligned to specs and the agreed upon plan and scope".
 - Review: Learner confirmed the prediction excerpt, then the check answer, browser observation, keep reason and help notes, as accurate before the APP-002 push.
