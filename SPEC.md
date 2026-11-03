@@ -6,9 +6,9 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-001.
-- **Status:** Verbella homepage built on branch `app-001-homepage` for issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); full checks pass locally; learner kept it.
-- **Next step:** Open the PR, review its CI, then decide whether to merge.
+- **Current feature:** APP-002 (not started).
+- **Status:** APP-001 kept and merged: PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) merged into `main` on November 3, 2026; issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1) closed.
+- **Next step:** Agree APP-002's scope, then open its own issue and branch.
 - **Implementation marker:** `studio.json` is at `implemented_through: 1` after APP-001 checks passed.
 
 This repository owns application code. Server/proxy changes and production
@@ -82,7 +82,7 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`, `app/static/brand/`, `app/static/fonts/` | Local `check --lesson APP-001` and full `check` at marker 1: Black, Pylint, 98 foundation cases, 2 APP-001 contracts, 2 Chromium journeys passed. AI reviewed 390px and desktop layouts, keyboard focus and reduced motion (fixed: static logo shown when reduce motion is on). Learner's check interpretation, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) open, CI pending |
+| APP-001 | Issue [#1](https://github.com/mcbridgeee/is373-app-studio/issues/1); `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`, `app/static/brand/`, `app/static/fonts/` | Local `check --lesson APP-001` and full `check` at marker 1: Black, Pylint, 98 foundation cases, 2 APP-001 contracts, 2 Chromium journeys passed. AI reviewed 390px and desktop layouts, keyboard focus and reduced motion (fixed: static logo shown when reduce motion is on). Learner's check interpretation, browser observation and keep reason are in [LEARNING.md](LEARNING.md) | Kept; PR [#2](https://github.com/mcbridgeee/is373-app-studio/pull/2) merged after `check` and `windows` CI passed; issue #1 closed |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 
