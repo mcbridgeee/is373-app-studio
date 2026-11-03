@@ -20,12 +20,12 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 ## APP-002
 
 - Prediction: Learner predicted that a logged-out request to `/api/me` should get a signup page, or an error saying they aren't logged in with a clear call to create an account or log in.
-- Check interpretation: Pending.
-- Browser observation: Pending.
-- Keep decision: Pending.
-- Review: Learner confirmed the prediction excerpt is accurate.
-- Help/gaps: AI explained that `/api/me` answers with data (401 error vs. account info), while the logged-out call to action belongs on the browser page `/dashboard`.
-- Evidence links / next step: Issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3), branch `app-002-accounts`; plan and build next.
+- Check interpretation: On `test_logout_revokes_a_copied_token_and_get_does_not_log_out`, after one hint, asked what a 200 in place of 401 would mean: "i dont know, i think it would just return a different error". Not yet evidenced: what the replay check protects against.
+- Browser observation: Signed up, logged in and out: "it catches if you have enough characters in your password", logging in "takes you to the screen with all your information, and logging out logs you out", and "if you try to go to / dashboard while logged out it gives no error just takes you to the sign in page." Learner's concern: "i don't think it's secure, and i dont think it can sense if someone is trying to break in or hack your account."
+- Keep decision: Keep: "it does the flow we wanted it to and is aligned to specs and the agreed upon plan and scope".
+- Review: Learner confirmed the prediction excerpt, then the check answer, browser observation, keep reason and help notes, as accurate before the APP-002 push.
+- Help/gaps: AI explained that `/api/me` answers with data (401 error vs. account info), while the logged-out call to action belongs on the browser page `/dashboard`. Learner chose to keep only the lesson's required scope, dropping the signup date and word-list area. AI built the API routes, forms and dashboard with the prepared security helpers, and fixed buttons that were not displaying lowercase. After the learner's check answer, AI explained that a 200 would mean a copied cookie still works after logout, so someone holding it would stay logged in as the learner; AI also explained the existing login throttling and what the app does not detect. Learner then asked to revise the cookies so a copied cookie cannot keep someone logged in; AI showed this is already what the replay check proves (logout revokes the session on the server; sessions also expire after 15 minutes), so no code changed.
+- Evidence links / next step: Issue [#3](https://github.com/mcbridgeee/is373-app-studio/issues/3), branch `app-002-accounts`. Next: commit, open the PR and check CI.
 
 ## APP-003
 

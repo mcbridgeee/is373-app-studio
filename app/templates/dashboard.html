@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}member space · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="form-stack" aria-labelledby="dashboard-title">
+  <p class="eyebrow">private to you</p>
+  <h1 id="dashboard-title">Your member space</h1>
+  {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+  <dl class="account">
+    <div><dt>username</dt><dd>{{ user.username }}</dd></div>
+    <div><dt>role</dt><dd>{{ user.role }}</dd></div>
+  </dl>
+  <form method="post" action="/logout">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button class="button" type="submit">Log out</button>
+  </form>
+</section>
+{% endblock %}

@@ -16,6 +16,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1.18rem/1.6 var(--serif-text);text-transform:lowercase;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 button,input{font:inherit}
+button{text-transform:inherit}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:4px}
 img{max-width:100%;height:auto}
 
@@ -67,6 +68,11 @@ code{font-size:.9em;overflow-wrap:anywhere}
 .form-stack label{display:block;margin-top:20px}
 .form-stack input{display:block;width:100%;min-height:48px;padding:12px;border:1px solid var(--ink);border-radius:8px;background:var(--surface);color:var(--ink)}
 .form-stack button{margin-top:26px}
+.form-stack .muted{font-size:1rem;margin:8px 0 0}
+.account{margin:24px 0 8px;border-top:1px solid var(--line)}
+.account div{display:flex;justify-content:space-between;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+.account dt{opacity:.8}
+.account dd{margin:0}
 .error,[role=alert]{color:#9b2424;font-weight:600}
 .notice{border-left:3px solid var(--accent);padding-left:16px}
 
